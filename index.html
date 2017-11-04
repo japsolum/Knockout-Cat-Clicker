@@ -6,6 +6,7 @@
 		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width">
 		<title>Cat Clicker Premium!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="style.css">
 
 
@@ -13,17 +14,19 @@
 
 	<body>
 		<div class="container">
-			<div class="header">
-				<h1>Cat Clicker</h1>
-				<hr>
+			<div class="row header">
+				<div class = "col-12">
+					<h1>Cat Clicker</h1>
+					<hr>
+				</div>
 			</div>
 
-			<div class= "appContainer">
-				<ul class="navItems" data-bind= "foreach: catList">
+			<div class= "row">
+				<ul class="navItem col-xs-3" data-bind= "foreach: catList">
 					<li class = "navButton" data-bind= "text: name, click: $parent.setCat">
 				</ul>
 
-				<div class="imgContainer" data-bind="with: currentCat"> 
+				<div class="imgContainer col-xs-9" data-bind="with: currentCat"> 
 					<h2 class="name" data-bind="text: name"></h2>
 					<hr>
 					<img class= "image" src="" alt="cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
