@@ -3,7 +3,7 @@
 <html>
 
 	<head>
-		<meta charset='utf-8'>ed 
+		<meta charset='utf-8'>
 		<meta name="viewport" content="width=device-width">
 		<title>Cat Clicker Premium!</title>
 		<link rel="stylesheet" href="style.css">
@@ -14,33 +14,38 @@
 	<body>
 		<div class="container">
 			<div class="header">
-				<h1> Cat Clicker App </h1>
+				<h1>Cat Clicker</h1>
 				<hr>
 			</div>
 
 			<div class= "appContainer">
-				<div class="navBar">
-					<ul class="navItems" data-bind= "foreach: catList">
-						<li class = "navButton" data-bind= "text: name, click: $parent.setCat">
-					</ul>
-				</div>
+				<ul class="navItems" data-bind= "foreach: catList">
+					<li class = "navButton" data-bind= "text: name, click: $parent.setCat">
+				</ul>
 
 				<div class="imgContainer" data-bind="with: currentCat"> 
 					<h2 class="name" data-bind="text: name"></h2>
+					<hr>
 					<img class= "image" src="" alt="cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
-					<div class="level" data-bind = "text: level"></div>
-					<div data-bind="text: clickCount"></div>
-					<div class="list">
-						<ul class="nicknames" data-bind="foreach: nicknames">
-							<li class="nickname" data-bind="text: $data"></li>
-						</ul>
+					<hr>
+					<div class = "scientific"> 
+						<span class = "boldUnderline">Scientific Name:</span>
+						<span data-bind="text: scientific"> </span>
+					</div>
+					<div class="level"> 
+						<span class="boldUnderline">Level:</span>
+						<span data-bind = "text: level"> </span>
+					</div>
+					<div>
+						<span class = "boldUnderline">Clicks:</span>
+						<span data-bind="text: clickCount"></span>
+					 	
 					</div>
 				</div>	
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-debug.js"></script>
-		<!--<script src="helper.js"></script>-->
 		<script src="script.js"></script>
 	</body>
 </html>

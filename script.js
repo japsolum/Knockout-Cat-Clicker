@@ -3,35 +3,35 @@ const initialCats= {
 		{
 			"name" : "Tiger",
 			"imgSrc" : "images/tiger.jpg",
-			"nicknames" : ["Striped killer"],
+			"Scientific" : "Panthera Tigris",
 			"clickCount" : 0
 		},
 
 		{
 			"name" : "Leopard",
 			"imgSrc" : "images/leopard.jpg",
-			"nicknames" : ["Spotted assassin"],
+			"Scientific" : "Panthera Pardus",
 			"clickCount" : 0
 		},
 
 		{
 			"name" : "Cheetah",
 			"imgSrc" : "images/cheetah.jpg",
-			"nicknames" : ["Speedster"],
+			"Scientific" : "Acinonyx Jubatus",
 			"clickCount" : 0
 		},
 
 		{
 			"name" : "Panther",
 			"imgSrc" : "images/panther.jpg",
-			"nicknames" : ["Shadow"],
+			"Scientific" : "Panthera Pardus",
 			"clickCount" : 0
 		},
 
 		{
 			"name" : "Lynx",
 			"imgSrc" : "images/lynx.jpg",
-			"nicknames" : ["Snow Cat"],
+			"Scientific" : "Lynx Pardinus",
 			"clickCount" : 0
 		}
 	]
@@ -40,7 +40,7 @@ var Cat = function(data) {
 	this.clickCount = ko.observable(data.clickCount);
 	this.name = ko.observable(data.name);
 	this.imgSrc = ko.observable(data.imgSrc);
-	this.nicknames = ko.observableArray(data.nicknames)
+	this.scientific = ko.observable(data.Scientific)
 
 	this.level = ko.computed(function() {
 		var clickCount = this.clickCount(),
